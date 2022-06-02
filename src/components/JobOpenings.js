@@ -24,6 +24,7 @@ class JobOpenings extends Component {
       jo = openings.map(opening => {
         return (
           <div class="col-lg-4 col-12 col-sm-6 px-3 py-3" key={opening.id}>
+          <a href='#'>
           <div class="card border-success mb-3 h-100">
               <div class="card-header bg-transparent text-dark fs-1 border-success"><h2>{opening.company}</h2></div>
               <div class="card-body text-primary">
@@ -42,6 +43,7 @@ class JobOpenings extends Component {
               </div>
               
             </div>
+            </a>
           </div>
         )
         }) 

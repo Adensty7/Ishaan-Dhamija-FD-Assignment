@@ -3,3 +3,18 @@ nav {
     background-color: cyan;
 }
 
+.card:hover {
+    background-color: yellow;
+    
+}
+
+a:link {
+    text-decoration: none;
+}
+
+img{
+    border-radius: 50%;
+}
+.offcanvas {
+    background-color: cyan;
+}
