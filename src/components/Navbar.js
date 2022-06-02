@@ -28,6 +28,7 @@ class Navbar extends Component {
           <div class="offcanvas-body text-center">
             <img
               src={user.pictureUrl}
+              alt="User's dp"
               class="img-fluid"
               height={300}
               width={300}
@@ -95,7 +96,7 @@ class Navbar extends Component {
                   aria-controls="offcanvasScrolling"
                 >
                   <h3 class="text-dark py-3">
-                    <img src={user.pictureUrl} height={50} width={50} />{" "}
+                    <img src={user.pictureUrl} alt="User's dp" height={50} width={50} />{" "}
                     {user.name}
                   </h3>
                 </a>
