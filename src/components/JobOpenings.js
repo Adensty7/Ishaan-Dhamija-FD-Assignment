@@ -25,18 +25,18 @@ class JobOpenings extends Component {
         return (
           <div class="col-lg-4 col-12 col-sm-6 px-3 py-3" key={opening.id}>
           <a href='#'>
-          <div class="card border-success mb-3 h-100">
-              <div class="card-header bg-transparent text-dark fs-1 border-success"><h2>{opening.company}</h2></div>
-              <div class="card-body text-primary">
+          <div class="card mb-3 h-100">
+              <div class="card-body">
                 <h5 class="card-title fs-3 fw-bold">{opening.designation}</h5>
-                <p class="card-text text-end">Location : {opening.location} <br /> Minimum Experience : {opening.min_experience} Years </p>
+                <h4 class="text-end">{opening.company}</h4>
+                <p class="card-text text-start"><i class="material-icons">location_on</i> {opening.location} <br /> <i class="material-icons">work</i> {opening.min_experience} Years </p>
               </div>
-              <div class="card-footer bg-transparent border-success h-100">
+              <div class="card-footer bg-transparent h-100">
               <h4>Skills</h4>
               <ul class="list-group list-group-horizontal">
               <div class="row justify-content-center text-center">
               {_.times(opening.skills.length, (i) => (
-            <li class="list-group-item col-4 m-3 p-3 mx-4 bg-info" key={i}>{opening.skills[i]}</li>
+            <li class="list-group-item col-4 m-3 p-3 mx-4" key={i}>{opening.skills[i]}</li>
           ))}
           </div>
               </ul>
@@ -61,7 +61,7 @@ class JobOpenings extends Component {
     return (
       <div class="container">
       <div class="d-flex justify-content-center px-3 py-3">
-      <h1 class="text-primary fw-bold">Job Openings</h1>
+      <h1 class="fw-bold db-text">Job Openings</h1>
       </div>
       <div class="row">
       {jo}

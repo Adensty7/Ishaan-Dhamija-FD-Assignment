@@ -34,10 +34,10 @@ class Navbar extends Component {
               width={300}
             />
             <hr />
-            <h2 class="offcanvas-title" id="offcanvasScrollingLabel">
+            <h2 class="offcanvas-title ly-text" id="offcanvasScrollingLabel">
               {user.name}
             </h2>
-            <p class="fs-4">{user.college}</p>
+            <p class="fs-4 ly-text">{user.college}</p>
           </div>
         </div>
       );
@@ -56,7 +56,7 @@ class Navbar extends Component {
         </div>
         <nav class="navbar navbar-expand-xl">
           <div class="container">
-            <a class="navbar-brand fs-1" href="#">
+            <a class="navbar-brand fs-1 ly-text" href="#">
               Job Openings
             </a>
             <button
@@ -73,17 +73,17 @@ class Navbar extends Component {
             <div class="collapse navbar-collapse" id="nav1">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 offset-lg-3 fs-4">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
+                  <a class="nav-link ly-text" aria-current="page" href="#">
                     Home
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link ly-text" href="#">
                     About Us
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link ly-text" href="#">
                     Contact
                   </a>
                 </li>
@@ -97,7 +97,7 @@ class Navbar extends Component {
                 >
                   <h3 class="text-dark py-3">
                     <img src={user.pictureUrl} alt="User's dp" height={50} width={50} />{" "}
-                    {user.name}
+                    
                   </h3>
                 </a>
               </form>
