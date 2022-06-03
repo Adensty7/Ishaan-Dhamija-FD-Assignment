@@ -24,12 +24,13 @@ class JobOpenings extends Component {
       jo = openings.map(opening => {
         return (
           <div class="col-lg-4 col-12 col-sm-6 px-3 py-3" key={opening.id}>
-          <a href='#'>
+          
           <div class="card mb-3 h-100">
               <div class="card-body">
                 <h5 class="card-title fs-3 fw-bold">{opening.designation}</h5>
                 <h4 class="text-end">{opening.company}</h4>
                 <p class="card-text text-start"><i class="material-icons">location_on</i> {opening.location} <br /> <i class="material-icons">work</i> {opening.min_experience} Years </p>
+                <p class="card-text text-end fs-5"><a href='#'>View Details <i class="material-icons fs-6">keyboard_arrow_right</i> </a></p>
               </div>
               <div class="card-footer bg-transparent h-100">
               <h4>Skills</h4>
@@ -41,9 +42,7 @@ class JobOpenings extends Component {
           </div>
               </ul>
               </div>
-              
             </div>
-            </a>
           </div>
         )
         }) 
