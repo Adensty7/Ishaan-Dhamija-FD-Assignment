@@ -52,14 +52,17 @@ class Navbar extends Component {
         </div>
       );
       joimg = (
-        <h3 class="text-dark px-3">
+        <div>
+          <h3 class="text-dark px-3">
                     <img
                       src={user.pictureUrl}
                       alt="User's dp"
                       height={50}
                       width={50}
-                    />{" "}
+                    /> 
                   </h3>
+                  
+        </div>
       );
     }
     else {
@@ -117,6 +120,13 @@ class Navbar extends Component {
                 <li class="nav-item">
                   <a class="nav-link ly-text" href="#">
                     Contact
+                  </a>
+                </li>
+                <li class="nav-item d-none d-sm-block d-xl-none">
+                  <a class="btn" href="#" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasScrolling"
+                  aria-controls="offcanvasScrolling">
+                  {joimg}
                   </a>
                 </li>
               </ul>
