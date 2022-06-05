@@ -49,3 +49,14 @@ img{
 .db-text {
     color: #023047;
 }
+
+
+.wy-text {
+    background-color: #023047;
+    color: white;
+    border: none;
+}
+.db-bg {
+    background-color: #023047;
+}
+

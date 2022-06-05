@@ -20,6 +20,7 @@ class Navbar extends Component {
     // Setting the value to the state of the component
     var { user } = this.state;
     var jo;
+    var joimg;
     if (user) {
       jo = (
         <div class="row justify-content-center">
@@ -33,12 +34,43 @@ class Navbar extends Component {
               height={300}
               width={300}
             />
-            <hr />
+            <hr class="ly-text" />
             <h2 class="offcanvas-title ly-text" id="offcanvasScrollingLabel">
               {user.name}
             </h2>
             <p class="fs-4 ly-text">{user.college}</p>
+            <hr class="ly-text" />
+            <ul class="list-group fs-5">
+              <a href="#"><li class="list-group-item wy-text">My Profile</li></a>
+              <a href="#"><li class="list-group-item wy-text">My Applications</li></a>
+              <a href="#"><li class="list-group-item wy-text">Edit Resume</li></a>
+              <a href="#"><li class="list-group-item wy-text">Edit Preferences</li></a>
+              <a href="#"><li class="list-group-item wy-text">Settings</li></a>
+              <a href="#"><li class="list-group-item wy-text">Log out</li></a>
+            </ul>
           </div>
+        </div>
+      );
+      joimg = (
+        <h3 class="text-dark px-3">
+                    <img
+                      src={user.pictureUrl}
+                      alt="User's dp"
+                      height={50}
+                      width={50}
+                    />{" "}
+                  </h3>
+      );
+    }
+    else {
+      jo = (
+        <div>
+          <h1>Loading .....</h1>
+        </div>
+      );
+      joimg = (
+        <div>
+          <h1>Loading .....</h1>
         </div>
       );
     }
@@ -54,7 +86,7 @@ class Navbar extends Component {
         >
           {jo}
         </div>
-        <nav class="navbar navbar-expand-xl">
+        <nav class="navbar fixed-top navbar-expand-xl">
           <div class="container">
             <a class="navbar-brand fs-1 ly-text" href="#">
               Job Openings
@@ -95,10 +127,7 @@ class Navbar extends Component {
                   data-bs-target="#offcanvasScrolling"
                   aria-controls="offcanvasScrolling"
                 >
-                  <h3 class="text-dark py-3">
-                    <img src={user.pictureUrl} alt="User's dp" height={50} width={50} />{" "}
-                    
-                  </h3>
+                  {joimg}
                 </a>
               </form>
             </div>
